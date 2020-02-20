@@ -3,6 +3,7 @@ import * as bodyParser from 'body-parser';
 import errorHandlerMiddleware from "./middlewares/errorHandlerMiddleware";
 import * as cookieParser from 'cookie-parser';
 const cors = require('cors');
+const path = require('path');
 
 class App {
     public app: express.Application;
@@ -30,6 +31,14 @@ class App {
         controllers.forEach(controller => {
             this.app.use('/', controller.router);
         });
+
+        this.app.use(express.static(path.join(__dirname)));
+        this.app.use("/css", express.static(__dirname + '/../dist/css'));
+        this.app.use("/js", express.static(__dirname + '/../dist/js'));
+
+        this.app.get('/', function (req, res) {
+            res.sendFile(path.join(__dirname + '/../dist/index.html'));
+          });
     }
 
     private listen(port: number) {

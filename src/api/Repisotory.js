@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const URL = "https://intense-temple-86488.herokuapp.com";
+const URL = "http://localhost:8080";
 
 export default axios.create({
     baseURL: URL

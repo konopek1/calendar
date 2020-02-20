@@ -26,6 +26,7 @@ class UserController {
 
     private register = async (request: express.Request, response: express.Response, next: express.NextFunction) => {
         const userData: userRequest = request.body;
+        console.log("register:",request.body)
         if (await this.userRepository.findOne({where: {username: userData.username}})) {
             next(new DuplicateUsernameException(userData.username));
         } else {
