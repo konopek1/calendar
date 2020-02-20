@@ -1,3 +1,6 @@
+# https://kiss-calendar.herokuapp.com/
+## keep it simple stupid calendar by MKon :)
+
 ## /project
 
 ### Project setup
