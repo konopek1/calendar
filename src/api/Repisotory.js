@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const URL = "http://localhost:8080";
+const URL = "https://kiss-calendar.herokuapp.com/";
 
 export default axios.create({
     baseURL: URL
