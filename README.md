@@ -1,6 +1,6 @@
-# https://kiss-calendar.herokuapp.com/
-## keep it simple stupid calendar for mobiles
-
+# keep it simple stupid calendar for mobiles
+## Frontend written in vue.js, backend in STACK: typescript,typeorm,express
+### This was my first project with nodejs backend and vue frontend
 ## /project
 
 ### Project setup
